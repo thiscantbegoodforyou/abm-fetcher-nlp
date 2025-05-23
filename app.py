@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 from transformers import pipeline
 from flask_cors import CORS
-import os
 
 app = Flask(__name__)
 CORS(app)  # Optional: allows requests from WordPress plugin
@@ -30,5 +29,6 @@ def classify_article():
     })
 
 if __name__ == "__main__":
+    import os
     port = int(os.environ.get("PORT", 5000))  # default to 5000 locally
     app.run(host="0.0.0.0", port=port)
