@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)  # Optional: allows requests from WordPress plugin
 
 # Load model once at startup
-classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
+classifier = pipeline("zero-shot-classification", model="valhalla/distilbart-mnli-12-1")
 
 CATEGORIES = ["Hiring", "Funding", "Expansion", "Partnership", "Compliance"]
 
